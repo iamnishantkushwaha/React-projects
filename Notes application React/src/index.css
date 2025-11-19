@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme {
+  --color-midnight: rgb(68, 68, 78,0.6);
+  
+}
+
+#Notes::-webkit-scrollbar{
+    scrollbar-width: none;
+}
