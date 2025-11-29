@@ -7,11 +7,11 @@ function Section() {
 
   useEffect(
     function () {
-      hello();
+     getdata();
     },
     [pageno]
   );
-  async function hello() {
+  async function getdata() {
     const response = await axios.get(
       `https://picsum.photos/v2/list?page=${pageno}&limit=18`
     );
@@ -35,7 +35,7 @@ function Section() {
         {print}
       </div>
       <div className="  flex justify-center align-middle">
-        <button
+        <button style={{opacity:pageno==1?0.5:1}}
           onClick={function () {
             if (pageno > 1) {
               SetPageno(pageno - 1);
@@ -64,3 +64,4 @@ function Section() {
   );
 }
 export default Section;
+
