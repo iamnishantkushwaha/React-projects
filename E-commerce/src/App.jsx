@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import Categories from './pages/Categories'
 import ShoppingCart from './pages/ShoppingCart'
 import Checkoutpage from './pages/Checkoutpage'
+import OrderConfirmation from './pages/OrderConfirmation'
 const App = () => {
   return (
     <div className='min-h-screen min-w-full'>
@@ -16,6 +17,7 @@ const App = () => {
          <Route path='/categories' element={<Categories/>}/>
          <Route path='/cart' element={<ShoppingCart/>}/>
           <Route path='/checkout' element={<Checkoutpage/>}/>
+          <Route path='/orderconfirmation' element={<OrderConfirmation/>}/>
       </Routes>
       {/* <Footer /> */}
     </div>

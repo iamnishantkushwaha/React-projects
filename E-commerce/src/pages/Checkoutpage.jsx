@@ -6,10 +6,12 @@ import { AiFillSafetyCertificate } from "react-icons/ai";
 import { useState } from "react";
 
 import { SiPaytm } from "react-icons/si";
+import { useNavigate } from "react-router-dom";
 const Checkoutpage = () => {
   const [isactiveshipping, Setisactiveshipping] = useState(true);
   const [isactivepayment, Setisactivepayment] = useState(true);
   const [paymentmode, setpaymentmode] = useState("Credit Card");
+  const navigate=useNavigate()
   return (
     <div className="min-h-screen  h-screen px-10 bg-[#101922]  p-20 flex justify-between">
       <div className="flex w-3/5 flex-col gap-3 text-white ">
@@ -259,7 +261,9 @@ const Checkoutpage = () => {
             <h1 className="text-white text-xl">Total</h1>
             <h1 className="text-green-600 text-3xl">$1256</h1>
           </div>
-          <button className="bg-blue-500 rounded-xl px-40 py-3 flex gap-4 text-xl text-white font-bold">
+          <button onClick={()=>{
+            navigate("/orderconfirmation")
+          }} className="bg-blue-500 rounded-xl px-40 py-3 flex gap-4 text-xl text-white font-bold">
             Place Order <AiFillSafetyCertificate className="text-2xl" />
           </button>
           <h3 className="uppercase text-gray-600 text-center mb-4 ">
