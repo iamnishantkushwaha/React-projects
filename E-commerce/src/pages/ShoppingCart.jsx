@@ -1,6 +1,8 @@
 import React from "react";
 import { RiDeleteBinLine } from "react-icons/ri";
+import { useNavigate } from "react-router-dom";
 const ShoppingCart = () => {
+  const navigate=useNavigate()
   return (
     <div className="min-h-screen w-full bg-[#101922]   px-10">
       <div className="flex items-end h-40">
@@ -65,7 +67,7 @@ const ShoppingCart = () => {
         </div>
 
 
-        <div className="p-4 py-20  flex flex-col  border border-white/30 rounded-xl gap-4 w-1/4 bg-[#0F172A]"><h1 className="font-bold text-white text-2xl">Order Summary</h1>
+        <div className="p-4 py-20  flex flex-col  border border-white/30 rounded-xl gap-6 w-1/4 bg-[#0F172A]"><h1 className="font-bold text-white text-2xl">Order Summary</h1>
         <div className="flex h-50 justify-between text-white border-white/20 border-b"><ul className="leading-8">
             <li>Subtotal</li>
             <li>Estimated Shipping</li>
@@ -78,9 +80,11 @@ const ShoppingCart = () => {
         </ul></div>
         <div className="flex justify-between font-bold text-white text-xl"><h1>Total</h1>
         <h1 className="text-3xl text-white">2563</h1></div>
-         <button className="text-white p-4  font-bold bg-blue-600 rounded-xl">Proceed to Checkout</button>
+         <button className="text-white p-4  mt-6 font-bold bg-blue-600 rounded-xl" onClick={()=>{
+          navigate("/checkout")
+         }}>Proceed to Checkout</button>
          <div className="text-center">
-            <p className="text-gray-500">Secure Checkout Powered By Stripe</p>
+            <p className="text-gray-500 leading-0">Secure Checkout Powered By Stripe</p>
          </div>
        </div>
       </div>
