@@ -7,6 +7,8 @@ import Categories from './pages/Categories'
 import ShoppingCart from './pages/ShoppingCart'
 import Checkoutpage from './pages/Checkoutpage'
 import OrderConfirmation from './pages/OrderConfirmation'
+import Profile from './pages/Profile'
+import EditProfile from './pages/EditProfile'
 const App = () => {
   return (
     <div className='min-h-screen min-w-full'>
@@ -18,6 +20,8 @@ const App = () => {
          <Route path='/cart' element={<ShoppingCart/>}/>
           <Route path='/checkout' element={<Checkoutpage/>}/>
           <Route path='/orderconfirmation' element={<OrderConfirmation/>}/>
+          <Route path='/profile' element={<Profile/>}/>
+          <Route path='/editprofile' element={<EditProfile/>}/>
       </Routes>
       {/* <Footer /> */}
     </div>
